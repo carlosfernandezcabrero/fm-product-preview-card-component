@@ -11,28 +11,45 @@ import ShoppingCart from '../components/shopping-cart.astro'
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <title>Product preview card component</title>
+
+    <link
+      href="/fonts/Montserrat.woff2"
+      rel="preload"
+      type="font/woff2"
+      as="font"
+      fetchpriority="high"
+      crossorigin="anonymous"
+    />
+    <link
+      href="/fonts/Fraunces.woff2"
+      rel="preload"
+      type="font/woff2"
+      as="font"
+      fetchpriority="high"
+      crossorigin="anonymous"
+    />
   </head>
   <body
-    class="px-[16px] py-[28px] font-medium bg-[#f2eae2] desktop:flex desktop:items-center desktop:justify-center desktop:min-h-screen"
+    class="px-[16px] py-[28px] font-medium bg-[#f2eae2] md:flex md:items-center md:justify-center md:min-h-screen"
   >
-    <article class="rounded-[10px] bg-white desktop:flex desktop:w-[600px]">
+    <article class="rounded-[10px] bg-white md:flex md:w-[600px]">
       <div>
         <img
-          class="rounded-t-[10px] object-cover desktop:hidden"
+          class="rounded-t-[10px] object-cover md:hidden"
           src="/images/product-mobile.jpg"
           alt="photo"
           height={240}
           width={343}
         />
         <img
-          class="hidden desktop:block desktop:rounded-tl-[10px] desktop:rounded-bl-[10px] desktop:object-cover desktop:h-full"
+          class="hidden md:block md:rounded-tl-[10px] md:rounded-bl-[10px] md:object-cover md:h-full"
           src="/images/product-desktop.jpg"
           alt="photo"
           width={280}
         />
       </div>
 
-      <div class="p-[25px] desktop:p-[32px] desktop:flex-1">
+      <div class="p-[25px] md:p-[32px] md:flex-1">
         <div class="mb-[25px]">
           <header>
             <h2 class="text-[12px] tracking-[5px] text-grayish">PERFUME</h2>
@@ -70,7 +87,7 @@ import ShoppingCart from '../components/shopping-cart.astro'
     src: url('/fonts/Montserrat.woff2') format('woff2');
     font-weight: 500, 700;
     font-style: normal;
-    font-display: optional;
+    font-display: swap;
   }
 
   @font-face {
@@ -78,7 +95,7 @@ import ShoppingCart from '../components/shopping-cart.astro'
     src: url('/fonts/Fraunces.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
-    font-display: optional;
+    font-display: swap;
   }
 
   body {
