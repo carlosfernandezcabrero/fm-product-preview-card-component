@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         grayish: '#6b7189',
         cyan: '#3c8067'
+      },
+      fontFamily: {
+        title: ['Fraunces', 'serif']
       }
     }
   },
